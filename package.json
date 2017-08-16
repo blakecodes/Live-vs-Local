@@ -1,0 +1,19 @@
+{
+  "name": "live-vs-local",
+  "version": "1.0.0",
+  "description": "Easily switch between developing with local resources or live. So when moving to production you can switch a button and have all the correct resources enabled.",
+  "main": "live-vs-local.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakecodes/Live-vs-Local.git"
+  },
+  "author": "Blake Connally",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blakecodes/Live-vs-Local/issues"
+  },
+  "homepage": "https://github.com/blakecodes/Live-vs-Local#readme"
+}
