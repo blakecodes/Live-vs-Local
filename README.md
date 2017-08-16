@@ -1,6 +1,6 @@
 # LvL - Live vs. Local
 
-LvL is a project based on making rapid deployments faster for small projects. This was created when I faced the problem of being forced to develop on my local machine with local assets, then having to change all of the asset URLs as soon as I moved it to live. 
+LvL is a project based on making deployments faster for small projects. This was created when I faced the problem of being forced to develop on my local machine with local assets, then having to change all of the asset URLs as soon as I moved it to live. For example, our project used local assets then had to swap to our assets located on AWS, making sure we deployed with the rights assets set was a major pain.
 
 The push times to get from local to server wasn't something I wanted to accept or do every 5 minutes. Therefore LvL was created. 
 
@@ -15,6 +15,7 @@ With LvL you can assign a local file and production file to assets so when you'r
   - Fetch all lvl elements with a method
   - Remove necessity of using the lvl-target tag for src and links
   - Improve accessibility for other elements
+  - Implement useage inside of other JS files. 
 
 
 #### Basic Setup: 
