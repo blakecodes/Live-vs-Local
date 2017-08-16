@@ -2,16 +2,20 @@
 <head>
     <title>Live vs. Local</title>
 
-    <link rel="stylesheet" href="" data-ly-local="local.html" data-ly-prod="prod.html" data-ly-target="href">
+    <!-- Test Style  -->
+    <link rel="stylesheet" href="" data-ly-local="localurl.html" data-ly-prod="productionurl.html" data-ly-target="href">
 
 </head>
 <body>
-    <div data-ly-local="ff" data-ly-prod="test.html"></div>
+    <!-- Test Script  -->
+    <script src="" data-ly-local="localurl.html" data-ly-prod="productionurl.html"></script>
 
-    <script src="" data-ly-local="local.html" data-ly-prod="prod.html" data-ly-target="script"></script>
-
+    <!-- Package Scripts  -->
     <script src="src/js/errorhandler.js"></script>
     <script src="src/js/jquery-3.2.1.min.js"></script>
     <script src="live-vs-local.js"></script>
+
+    <!-- Custom Script  -->
+    <script src="src/js/main.js"></script>
 </body>
 </html>

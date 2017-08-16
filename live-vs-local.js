@@ -1,13 +1,9 @@
 function LiveVsLocal(){
-    this.local = "[data-ly-local]";
-    this.prod = "[data-ly-prod]";
-    this.target = "href";
     this.environment = 'prod';
 }
 
-
 //Check the element for its target tag
-//Tag can be omitted on link and script elements
+//Tag can be omitted on script elements
 LiveVsLocal.prototype.checkTarget = function(target, tagName, index){
     target == null ? sendWarn('[data-ly-target] is not set, defaulting to src attribute [Ly Index   : ' + index + ']') : false;
     return target == null ? 'src' : target;
@@ -27,19 +23,17 @@ LiveVsLocal.prototype.run = function(){
         this.tagName = $(this).get(0).tagName;
         this.index = index;
 
+        this.prodV = $(this).data('ly-prod');
+        this.localV = $(this).data('ly-local')
+
         this.checked = $this.checkTarget(this.target, this.tagName, this.index);
 
-        $this.assign(this, this.checked, 'value2');
-
-        
+        $this.assign(this, this.checked, $this.fetch(this.prodV, this.localV));        
     })
 }
 
-//Check the environemnt and determine which ly element
-//should be used to assign the value
-LiveVsLocal.prototype.checkEnv = function(){
-    var $this = this;
-    console.log($this.environment);
+//Fetch the value that should be assigned to the element
+LiveVsLocal.prototype.fetch = function(prodV, localV){
+    $this = this;
+    return $this.environment == 'prod' ? prodV : localV;
 }
-
-var lvl = new LiveVsLocal;
