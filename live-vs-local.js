@@ -5,7 +5,7 @@ function LiveVsLocal(){
 //Check the element for its target tag
 //Tag can be omitted on script elements
 LiveVsLocal.prototype.checkTarget = function(target, tagName, index){
-    target == null ? sendWarn('[data-ly-target] is not set, defaulting to src attribute [Ly Index   : ' + index + ']') : false;
+    target == null ? sendWarn('[data-lvl-target] is not set, defaulting to src attribute [lvl Index   : ' + index + ']') : false;
     return target == null ? 'src' : target;
 }
 
@@ -18,13 +18,13 @@ LiveVsLocal.prototype.assign = function(e, target, value){
 LiveVsLocal.prototype.run = function(){
     var $this = this;
 
-    $('[data-ly-local]').each(function(index, value){
-        this.target = $(this).data('ly-target');
+    $('[data-lvl-local]').each(function(index, value){
+        this.target = $(this).data('lvl-target');
         this.tagName = $(this).get(0).tagName;
         this.index = index;
 
-        this.prodV = $(this).data('ly-prod');
-        this.localV = $(this).data('ly-local')
+        this.prodV = $(this).data('lvl-prod');
+        this.localV = $(this).data('lvl-local')
 
         this.checked = $this.checkTarget(this.target, this.tagName, this.index);
 
